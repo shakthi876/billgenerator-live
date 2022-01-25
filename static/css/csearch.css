@@ -1,5 +1,7 @@
 
-  .wrap{display:flex;}
+  .wrap{
+    display:flex;
+  }
   .box{
       margin-top: 4%;
       height: 100vh;
