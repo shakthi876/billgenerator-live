@@ -10,6 +10,31 @@ Register
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 crossorigin="anonymous">
 
+<style>
+
+.bm{
+    padding-left: 30%;
+}
+
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    background-color: rgb(230, 181, 23);
+  }
+
+  .form-group{
+      width: fit-content;
+      padding-left: 30%;
+  }
+  .bm{
+      background-color: red;
+      padding-left: 35%;
+  }
+}
+</style>
+
+
+
 
 
 {% for message in messages %}
@@ -88,7 +113,7 @@ crossorigin="anonymous">
                 </div>
            
             
-            <div style="padding-left: 30%;">
+            <div  class='bm'>
                         
             <input type="submit" value="Register" class="btn btn-success"  > &nbsp;&nbsp;<a href="{% url 'login' %}" class="btn btn-primary">Cancel</a>
                     
