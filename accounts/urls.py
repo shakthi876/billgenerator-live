@@ -11,6 +11,6 @@ urlpatterns = [
     path('adminlogin/',views.adminlogin,name='adminlogin'),
    # path('adminchange/',views.adminchange,name='adminchange'),
    # path('otp/',views.otp,name='otp'),
-   path('how/',views.how,name='how'),
+   path('howi/',views.howi,name='howi'),
    path('changepassword/<token>/',views.changepassword,name='changepassword'),
 ]

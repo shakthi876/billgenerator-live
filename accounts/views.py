@@ -279,10 +279,10 @@ def forgetpass(request):
     return render(request,'forgetpass.html') 
 
 
-def how(request):
+def howi(request):
     code = request.user.username
     cname = CompanyDetails.objects.get(Code=code)
     context = {
          "shop": cname,
      }
-    return render(request,'how.html',context)
+    return render(request,'howi.html',context)
