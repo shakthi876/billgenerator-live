@@ -183,6 +183,8 @@ def export(request):
     
     if Sales.objects.filter(user=user).exists():
         #Increment to next bill count
+        test1  = request.user.username
+        c = CompanyDetails.objects.filter(Code= test1).first()
         args=Bill.objects.filter(user=user)
         t=args.aggregate(Max('BillNumber'))
         t1=t['BillNumber__max']
@@ -210,7 +212,7 @@ def export(request):
         sales = Sales.objects.filter(user=request.user)
         sum = sales.aggregate(Sum('Total'))
         print(sum)
-        html_string = render_to_string('pdf-output.html',{'expenses': sales,'total': sum['Total__sum'],'date':d1})
+        html_string = render_to_string('pdf-output.html',{'expenses': sales,'total': sum['Total__sum'],'date':d1,'shop' :c})
 
         html =HTML(string=html_string)
 
