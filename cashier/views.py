@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from datetime import date
 from multiprocessing import connection
 import re
-from tkinter.tix import MAX
+
 from urllib import request
 from django.contrib import messages
 from django.db.models.aggregates import Sum
