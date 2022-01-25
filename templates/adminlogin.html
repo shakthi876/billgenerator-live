@@ -28,25 +28,37 @@ Register
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-@media screen and (max-width: 600px){
-  #submit{
-    margin-bottom: 10%;
-    margin-right: 10;
+@media screen and  (max-device-width: 768px) {
 
-  }
-  #admin{
-    text-align:center !important;
-    font-size: 1.3em;
-  }
-  .form-group{
-    width: 150%;
-  
-  }
-  .container{
-    width: 200%;
-    margin:0;
-    padding:0;
-  }
+
+.overall{
+  margin:0;
+ 
+}
+.ce{
+  margin: 0;
+}
+.form-control{
+  width: 60%;
+  height: 10%;
+}
+.ll,.form-control{
+  font-size: 100%;
+}
+#admin{
+  text-align: left;
+  font-size: 150%;
+}
+.btn {
+        
+        font-size:90%;
+        line-height: 1;
+        padding:2% 3%;
+      }
+
+      input::placeholder {
+          font-size: 80%;
+}
 }
 </style>
  
@@ -97,7 +109,7 @@ body{
   </div>
 
 {% endfor %}
-    <label for="p">Enter Admin Password</label>
+    <label for="p" class='ll'>Enter Admin Password</label>
     <input type="password" class="form-control" aria-describedby="Help" name="pass" id="p" placeholder="Enter Admin pass">
     <small id="Help" class="form-text text-muted">Admin password is case-sensitive</small>
     

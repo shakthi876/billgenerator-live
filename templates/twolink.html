@@ -8,6 +8,29 @@ Home
 <link rel="stylesheet" href="{% static 'css/twolinkstyle.css'%}">
 
 
+<style>
+  .grid-container {
+    grid-template-columns: auto auto ;
+  }
+  #a{
+    display:none;
+  }
+
+@media screen and  (max-device-width: 768px) {
+
+.grid-item{
+  font-size: 130%;
+  padding: 2%;
+}
+
+}
+
+
+</style>
+
+
+
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
     <a class="navbar-brand mb-0 h1" href="">{{name}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,15 +81,15 @@ Home
 
 
   <div class="grid-container">
-    <div class="grid-item">  <div id='hideMe'> Hello, {{ name}} Welcomes you</div>   </div>
-    <div class="grid-item"></div>
+    <div class="grid-item">  Hello, {{ name}} Welcomes you</div>  
+  
     <div class="grid-item" id='s'>{{d1}}, {{time}}</div>
  
   </div>
  
   
  
-  
+    <p id='a'>{{d1}}, {{time}}</p>
 <div class="links">
 
 

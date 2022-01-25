@@ -6,7 +6,72 @@ Welcome
 
 {% block content %}
 {% load static %}
+
 <link rel="stylesheet" href="{% static 'css/ssearch.css'%}">
+
+<style>
+.remall{
+    padding-left: 80%;
+}
+@media screen and  (max-device-width: 768px) {
+
+
+.overall{
+    margin:0;
+    margin-top: 5%;
+}
+.form-group{
+    margin:0;
+}
+.table-responsive{
+    margin:0;
+    width: 100%;
+}
+#ss{
+    margin: 0;
+    
+}
+.remall{
+    padding-left: 15%;
+}
+.form-control{
+    font-size: 100%;
+    
+}
+#ab,#bc,#cd {
+   height:30px;
+}
+input::placeholder {
+          font-size: 90%;
+}
+.fa-trash-alt, .fa-edit{
+    font-size: 100%;
+}
+    
+ 
+.te {
+        width:95%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 100%;
+    }
+    .btn {
+        
+        font-size:90%;
+        line-height: 1.5;
+        padding:5% 6%;
+      }
+
+      #fnaw{
+          font-size: 80%;
+      }
+}
+
+
+</style>
+
+
+
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; width: 100%;">
     <a class="navbar-brand mb-0 h1" href="{% url 'twolink' %}">{{shop}}</a>
@@ -58,7 +123,7 @@ Welcome
     
         <div class="container" class="form-group">
             
-        <table style="width: 70%;" >
+        <table>
             {% for message in messages %}
             <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert" style="width: 60%;">
                 <strong>Message: </strong>{{ message }}
@@ -71,17 +136,17 @@ Welcome
             <thead>
                 <tr>
                     <th>
-                        <label for="ab"> Enter Item_ID </label>
+                        <label for="ab">Item_ID </label>
                         <input type="text" id= "ab" class="form-control" pattern="\d*" maxlength="4"  name="id"  placeholder='1-9999 digits' required>
                     </th> 
-                    <th>
-                        <label for="bc">Enter Item name</label>
+                    <th style="justify-content: center;">
+                        <label for="bc">Item name</label>
                         <input type="text" name="name" class="form-control" id="bc" placeholder="Item Name..." required>
 
                     </th>
                     <th style="padding-right:15%;">
-                        <label for="cd">Enter Price</label>
-                        <input type="number" class="form-control" step=1 name="price" placeholder="Price" required>
+                        <label for="cd">Price</label>
+                        <input type="number" class="form-control" step=1 name="price" id='cd' placeholder="Price" required>
                     </th>
 
                 </tr>
@@ -99,10 +164,9 @@ Welcome
                         <button type="submit" class="btn btn-success" >
                            Add Item
                         </button>
-                    
-                    
+       
                     </th>
-                    <th style="padding-left: 100%;"><a href="{% url 'deleteall' %}" class="btn btn-danger"><i class="fas fa-times"></i> &nbsp; RemoveAll</a></th>
+                    <th class='remall'><a href="{% url 'deleteall' %}" class="btn btn-danger" id='df'>  <i class="fas fa-times"></i> &nbsp; RemoveAll</a></th>
                 </tr>
             </thead>
         </table>
@@ -127,11 +191,14 @@ Welcome
 
 
 
+<div class='te'>
 
+
+   
 
 <div class="container">
-<div class="table-responsive-sm" style="width: 55%;">
-        <table class="table" id='t' >
+<div  style="width: 55%;">
+        <table class="table" id='t'>
     <thead> <tr>
     <th>Item ID</th>
     <th>Item Name</th>
@@ -146,13 +213,13 @@ Welcome
         <td>{{ item.Product_Id}}</td>
         <td>{{ item.Product_name}}</td>
         <td>{{ item.Price}}</td>
-        <td><a href="{% url 'deleteitem' item.id %} " class="button-3"><i class="fas fa-trash-alt"></i></a></td>
-        <td><a href="{% url 'modify' item.Product_Id %} " class="button-0"><i class="far fa-edit"></i></a></td>
+        <td><a href="{% url 'deleteitem' item.id %} " class="button-3"> <p id='fnaw'> <i class="fas fa-trash-alt"></i> </p></a></td>
+        <td><a href="{% url 'modify' item.Product_Id %} " class="button-0"> <p id='fnaw'> <i class="far fa-edit"></i></p> </a></td>
     </tr>
     {% endfor %}
 </tbody>
 </table>
 </div></div>
-
+</div>
 </div>
 {% endblock%}
