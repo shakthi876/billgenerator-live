@@ -10,14 +10,44 @@ Forgetpass
 <style>
 
 .overall{
-    margin-left: 36%;
-    margin-top: 12%;
     
+    margin-top: 12%;
+    margin-left: 36%;
     margin-right:30%;
 }
  
 .ce{
     margin-left: 25%;
+}
+
+@media screen and  (max-device-width: 768px) {
+   
+    .overall{
+        width: 100%;
+    }
+    body{
+        margin-right: 26%;
+        margin-top: 20%;
+        font-size: medium;
+    }
+    .overall{
+    
+    margin: 0;
+    margin-left: 15%;
+}
+
+.ce{
+    margin:0;
+}
+.btn.btn-dark{
+    font-size: medium;
+}
+.btn.btn-success
+{
+    font-size: medium;
+}
+
+
 }
 
 </style>
@@ -35,7 +65,7 @@ Forgetpass
 
 
 <hr>
-<div class="container">
+<div class="container" class='o'>
     <form  method="POST">
         {% csrf_token %}
         <div class="form-group">
