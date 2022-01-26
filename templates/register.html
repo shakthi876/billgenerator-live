@@ -19,6 +19,18 @@ crossorigin="anonymous">
 
 @media screen and  (max-device-width: 768px) {
   
+body{
+    
+    font-size: 80%;
+}
+input::placeholder{
+    font-size: 80%;
+}
+
+.form-control{
+    height: 28px;
+    width: 80%;
+}
 
   .form-group{
       
@@ -28,6 +40,9 @@ crossorigin="anonymous">
   .bm{
      
       padding-left: 8%;
+  }
+  .overall{
+      margin-top: 14%;
   }
 }
 </style>
@@ -48,7 +63,7 @@ crossorigin="anonymous">
 
   
 
-      
+      <div class="overall">
             <form action="" method="POST" class='main-form' >
                 {% csrf_token %}
                 <div class="form-group" id='c' style="text-align: center;">
@@ -101,7 +116,7 @@ crossorigin="anonymous">
                 <div class="form-group">
                     <label for="p2">Admin Code</label> 
                     <input type="password" id = 'p2' name="password3" minlength="8" class='form-control'  placeholder="8 character password..." required>
-                    
+                    <small class='form-text text-muted '>Required to login Admin Page</small>
 
                 </div>
           
@@ -119,5 +134,5 @@ crossorigin="anonymous">
         </div>
             </form>
   
-        
+        </div>    
 {% endblock%}

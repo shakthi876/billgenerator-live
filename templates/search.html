@@ -11,15 +11,20 @@ Search
 <script src="https://kit.fontawesome.com/9234ad5b48.js" crossorigin="anonymous"></script>
 
 <style>
+
+
+
     .box1 {
         width: 35%;
         overflow: scroll;
+        order: 2;
 
     }
 
     .box2 {
         width: 65%;
         overflow: scroll;
+        order:1;
 
     }
 
@@ -56,8 +61,13 @@ Search
             margin-left: 6%;
         }
 
-       
+       .box1{
+order: 1;
+       }
 
+       .box2{
+order:2;
+       }
         .wrap {
             display: block;
         }
@@ -106,6 +116,9 @@ Search
             font-size: 90%;
             line-height: 1;
             padding: 5% 6%;
+        }
+        #hidden{
+            display: none;
         }
 
     }
@@ -215,7 +228,7 @@ Search
             <div style="margin-left: 3%;">
                 <hr>
                 <hr>
-                <h3>Enter the items</h3>
+                <h3 id='hidden'>Bill Counter</h3>
                 <hr>
                 <table style="margin-left: 5%;">
                     <thead>

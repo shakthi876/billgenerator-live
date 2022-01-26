@@ -10,44 +10,45 @@ Home
 
 <style>
   .grid-container {
-    grid-template-columns: auto auto ;
-  }
-  #a{
-    display:none;
+    grid-template-columns: auto auto;
   }
 
-@media screen and  (max-device-width: 768px) {
+  #a {
+    display: none;
+  }
 
-.grid-item{
-  font-size: 110%;
-  padding: 2%;
-}
+  @media screen and (max-device-width: 768px) {
 
-}
+    .grid-item {
+      font-size: 110%;
+      padding: 2%;
+    }
 
-
+  
+  }
 </style>
 
 
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-    <a class="navbar-brand mb-0 h1" href="">{{name}}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href=""> <span class="sr-only">(current)</span></a>
-        </li>
-            <li class="nav-item active">
-            <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
-          </li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand mb-0 h1" href="">{{name}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href=""> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+      </li>
 
 
-         <!--  <li class="nav-item">
+      <!--  <li class="nav-item">
             <a class="nav-link" href="{% url 'search' %}">Cashier</a>
           </li>
 
@@ -60,77 +61,91 @@ Home
           </li>
 
             -->
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <a href="{% url 'login' %}"  class="btn btn-dark my-2 my-sm-0" type="submit"> Logout</a>
-        
-      </form>
-    </div>
-  </nav>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a href="{% url 'login' %}" class="btn btn-dark my-2 my-sm-0" type="submit"> Logout</a>
 
-
-
-  
-
-
-
-
-
-
-
-
-
-  <div class="grid-container">
-    <div class="grid-item">  Hello, <br> {{ name}} Welcomes you</div>  
-  
-    <div class="grid-item" id='s'>{{d1}}</div>
- 
+    </form>
   </div>
- 
-  
- 
-    <p id='a'>{{d1}}, {{time}}</p>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-container">
+  <div class="grid-item"> Hello, <br> {{ name}} Welcomes you</div>
+
+  <div class="grid-item" id='s'>{{d1}}</div>
+
+</div>
+
+
+
+<p id='a'>{{d1}}, {{time}}</p>
 <div class="links">
 
 
 
-    
-<table style="font-size: large; " >
-    <thead>
+  <div class="e">
+    <table style="font-size: large;">
+      <thead>
         <th></th>
-    </thead>
-    <tbody>
-      <div class="t">
-        <tr style="border-left: 6px ridge; " > <td class="c"><a class="nav-link" id='check'  href="{% url 'adminlogin'  %}">Admin</a></td>  </tr> 
-        
-      </div>
-        <tr><td> <hr></td></tr>
-        
-        <tr style="border-left: 6px ridge"> <td class="c"><a class="nav-link" id='check' href="{% url 'search' %}">Cashier</a></td></tr>
-       
-      
-        <tr><td> <hr></td></tr>
-      
-        <tr style="border-left: 6px ridge" > <td class="c"><a class="nav-link" id='check' href="{% url 'howi' %}">How to Use</a></td></tr>
-    </tbody>
+      </thead>
+      <tbody>
+        <div class="t">
+          <tr style="border-left: 6px ridge; ">
+            <td class="c"><a class="nav-link" id='check' href="{% url 'adminlogin'  %}">Admin</a></td>
+          </tr>
+
+        </div>
+        <tr>
+          <td>
+            <hr>
+          </td>
+        </tr>
+
+        <tr style="border-left: 6px ridge">
+          <td class="c"><a class="nav-link" id='check' href="{% url 'search' %}">Cashier</a></td>
+        </tr>
 
 
-</table>
+        <tr>
+          <td>
+            <hr>
+          </td>
+        </tr>
 
+        <tr style="border-left: 6px ridge">
+          <td class="c"><a class="nav-link" id='check' href="{% url 'howi' %}">How to Use</a></td>
+        </tr>
+      </tbody>
+
+
+    </table>
+  </div>
 </div>
 
 
 
 
 <div class='links'>
- 
 
 
-            
-  
 
 
-  
+
+
+
+
 </div>
 
 {% endblock%}

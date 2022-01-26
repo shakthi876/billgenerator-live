@@ -7,6 +7,46 @@
 
 <link rel="stylesheet" href="{% static 'css/delete.css'%}">
 
+<style>
+  .f{
+    font-size: 240%;
+    
+  }
+  .in{
+    padding-left: 100%;
+  }
+  @media screen and (max-device-width: 768px) {
+
+    
+
+    .sw{
+      margin:0;
+      margin-top: 15%;
+      margin-left: 9%;
+      
+    }
+    .f{
+      font-size: 120%;
+      position: absolute;
+      left: 12%;
+      
+    }
+    .in{
+      padding-left: 60%;
+    }
+    .fa-trash-alt, .fa-times{
+      font-size: 40%;
+    }
+    
+
+  }
+</style>
+
+
+
+
+
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand mb-0 h1" href="{% url 'twolink' %}">{{shop}}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +81,7 @@
 
 
       <div class="sw">
-              <p style=" font-size: 240%;">  Are you sure to delete?</p>
+              <p class='f'>  Are you sure to delete?</p> <hr>
 
                 <table  style="margin-left: 10%;">
 
@@ -53,7 +93,7 @@
                                 </button>
 
                                 </th>
-                                <th style="padding-left: 100%;">
+                                <th class="in">
                                   <a href="{% url 'display' %}" class='bc'><i class="fas fa-times"></i></a>
                                 </th>
                             </tr>
