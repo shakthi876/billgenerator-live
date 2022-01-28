@@ -9,7 +9,13 @@ Login
 crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'css/loginstyle.css'%}">
 
- 
+{% block meta %}
+<meta property="og:title" content="Join the best company in the world!" />
+{% endblock meta %}
+
+
+
+
 <!-- <img src="{% static 'images/logo.png' %}" alt="Logo">
 
 <style>
