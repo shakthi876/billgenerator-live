@@ -15,7 +15,9 @@ crossorigin="anonymous">
 .bm{
     padding-left: 30%;
 }
-
+#c{
+    text-align: center;
+}
 
 @media screen and  (max-device-width: 768px) {
   
@@ -44,6 +46,9 @@ input::placeholder{
   .overall{
       margin-top: 4%;
   }
+  #c{
+      text-align: left;
+  }
 }
 </style>
 
@@ -66,7 +71,7 @@ input::placeholder{
       <div class="overall">
             <form action="" method="POST" class='main-form' >
                 {% csrf_token %}
-                <div class="form-group" id='c' style="text-align: center;">
+                <div class="form-group" id='c' >
                     <strong  >Register your Account</strong> 
 <hr>
                 </div>
